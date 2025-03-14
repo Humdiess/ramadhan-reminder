@@ -16,7 +16,7 @@ function AddItem() {
     }
 
   return (
-    <div className='bg-white w-96 p-4 h-auto aspect-video rounded-lg flex flex-col justify-center items-center border border-gray-400 border-dashed hover:cursor-pointer' >
+    <div className='bg-white w-96 p-4 h-auto aspect-video rounded-lg flex flex-col justify-center items-center border border-gray-400 border-dashed hover:cursor-pointer' onClick={() => openAddItem()}>
         <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-20 w-20 text-gray-400"
@@ -32,10 +32,6 @@ function AddItem() {
             />
         </svg>
         <p className='text-gray-400'>Tambahkan Aplikasi</p>
-
-        <button className='mt-96' onClick={() => new Notification('Aplikasi', {body: 'Aplikasi berhasil ditambahkan'})}>
-            test
-        </button>
     </div>
   )
 }
