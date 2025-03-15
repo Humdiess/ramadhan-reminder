@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import ReminderButton from '@/ui/reminderButton'
 
 interface AppItemProps {
   title: string
@@ -22,16 +23,10 @@ function AppItem({ title, url, description }: AppItemProps) {
             <p>{description}</p>
         </div>
 
-        <div className='flex gap-2'>
-          <button onClick={() => openApp(url)} className='px-4 py-2 bg-red-600 text-white font-medium rounded-md cursor-pointer'>Buka Aplikasi</button>
-          <button onClick={() => alert("reminder set")} className='border border-red-600 p-4 rounded-md hover:cursor-pointer'>
-            {/* bell icon */}
+        <div className='flex gap-2 w-full justify-between'>
+          <button onClick={() => openApp(url)} className='px-4 py-2 bg-red-600 text-white font-medium rounded-md cursor-pointer w-full'>Buka Aplikasi</button>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="red" stroke="red" strokeWidth="2" stroke-linecap="round"        stroke-linejoin="round">
-                <path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2z" />
-                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
-            </svg>
-          </button>
+          <ReminderButton />
         </div>
     </div>
   )
